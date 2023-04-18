@@ -19,7 +19,7 @@ return repoNames;
 }
 
 const Projects = () => {
-    const [repositories, setRepositories] = useState<string[]>([]);
+    const [repository, setRepositories] = useState<string[]>([]);
   
     useEffect(() => {
       getRepoNames().then(result => {
@@ -31,7 +31,10 @@ const Projects = () => {
 
     <div className='row bg-black h-75'>
         <h2 className='text-white my-2'>My GitHub Projects</h2>
-        {repositories.length > 0 && <MyCarousel repos={repositories}/>}
+        <RepositoriesContext.Provider value={repository}>
+        {repository.length > 0 && <MyCarousel/>}
+        </RepositoriesContext.Provider>
+        
     </div>
     )
 }

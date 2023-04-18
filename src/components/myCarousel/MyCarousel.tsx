@@ -5,13 +5,12 @@ import { Carousel } from 'react-bootstrap';
 import Image from 'next/image';
 import useRepositories from '@/hooks/useRepositories';
 
-interface repository{
-  repos:string[]
-}
-const MyCarousel: FC<repository> = ({repos}) => {
+
+const MyCarousel: FC= () => {
+  const repository = useRepositories();
   return (
     <Carousel className='h-75 '>
-       {repos.map((item) => {
+       {repository.map((item) => {
         return (
           <Carousel.Item key={item}>
             <div className='d-block w-100'>

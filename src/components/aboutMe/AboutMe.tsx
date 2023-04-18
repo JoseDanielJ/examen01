@@ -1,8 +1,10 @@
-import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+
+
 const AboutMe = () => {
+  
   return (
     <div className='row align-content-center justify-content-center bg-dark h-75 '>
         <div className='col-8'>

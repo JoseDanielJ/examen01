@@ -7,6 +7,7 @@ import AboutMe from '@/components/aboutMe/AboutMe';
 import Projects from '@/components/projects/Projects';
 import CallToAction from '@/components/callToAction/CallToAction';
 import Footer from '@/components/footer/Footer';
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {

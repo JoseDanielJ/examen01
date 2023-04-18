@@ -1,9 +1,5 @@
 import { createContext } from "react"; 
-export interface repositories{
-    repositories:string[]
-}
-const RepositoriesContext = createContext<repositories>({
-    repositories:[]
-})
+
+const RepositoriesContext = createContext<string[]>([]);
 
 export default RepositoriesContext;
