@@ -1,34 +1,30 @@
 import React,{FC} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
-import 'popper.js/dist/popper.min.js';
 import { Carousel } from 'react-bootstrap';
 import Image from 'next/image';
+import useRepositories from '@/hooks/useRepositories';
 
-const MyCarousel: FC = () => {
+interface repository{
+  repos:string[]
+}
+const MyCarousel: FC<repository> = ({repos}) => {
   return (
-    <Carousel>
-      <Carousel.Item>
-        <Image src="/03.png" alt="First slide" width={500} height={200} />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <Image src="/03.png" alt="First slide" width={500} height={200} />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <Image src="/03.png" alt="First slide" width={500} height={200} />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
+    <Carousel className='h-75 '>
+       {repos.map((item) => {
+        return (
+          <Carousel.Item key={item}>
+            <div className='d-block w-100'>
+            <Image src={"/facebook.svg"} alt='facebook' width={40} height={40} className='py-5 my-5'></Image>
+            </div>
+            <Carousel.Caption>
+            <h3 className='text-danger'>{item.toUpperCase()}</h3>
+            </Carousel.Caption>
+
+          </Carousel.Item>
+        );
+      })}
+     
     </Carousel>
   );
 };
