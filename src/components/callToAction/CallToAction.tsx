@@ -32,7 +32,7 @@ const CallToAction = () => {
 
   return (
     <div className='row h-75 bg-dark'>
-        <h2 className='text-white'>CallToAction</h2>
+        <h1 className='text-white px-5'>CallToAction</h1>
        
         <div className='d-flex gap-5 mx-5 my-5'>
             <div className='w-75'>

@@ -30,7 +30,7 @@ const Projects = () => {
     return (
 
     <div className='row bg-black h-75'>
-        <h2 className='text-white my-2'>My GitHub Projects</h2>
+        <h2 className='text-white my-2 px-5'>My GitHub Projects</h2>
         <RepositoriesContext.Provider value={repository}>
         {repository.length > 0 && <MyCarousel/>}
         </RepositoriesContext.Provider>

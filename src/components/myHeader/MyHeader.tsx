@@ -11,7 +11,6 @@ const MyHeader = () => {
             <button className='btn btn-primary w-25'>About me</button>
             <button className='btn btn-primary w-25'>Projects</button>
             <button className='btn btn-primary w-25'>Call to action</button>
-            <button className='btn btn-primary w-25'>Footer</button>
         </div>
     </div>
   )
