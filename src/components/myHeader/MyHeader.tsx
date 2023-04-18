@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Header = () => {
+const MyHeader = () => {
   return (
-    <div className='row h-25 bg-black'>
+    <div className='row min-vh-50 bg-black align-items-center justify-content-center'>
         <div className='col-5'>
-            <h2>Hi Im Daniel </h2>
-            <h2>WebDesigner </h2>
+            <h2 className='text-white'>Hi Im Daniel </h2>
+            <h2 className='text-white'>WebDesigner </h2>
         </div>
-        <div className='col-7 border-1'>
+        <div className='col-7'>
             <button className='btn btn-primary'>About me</button>
             <button className='btn btn-primary'>Projects</button>
             <button className='btn btn-primary'>Call to action</button>
@@ -17,4 +17,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default MyHeader;

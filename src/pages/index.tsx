@@ -2,8 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.css';
-import Header from '@/components/header/Header';
-
+import Header from '@/components/myHeader/MyHeader';
+import AboutMe from '@/components/aboutMe/AboutMe';
+import Projects from '@/components/projects/Projects';
+import CallToAction from '@/components/callToAction/CallToAction';
+import Footer from '@/components/footer/Footer';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -15,8 +18,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='container vh-100 w-100 d-flex flex-column bg-danger'>
+      <main className='container min-vh-100 min-w-100 d-flex flex-column bg-danger'>
       <Header></Header>
+      <AboutMe></AboutMe>
+      <Projects></Projects>
+      <CallToAction></CallToAction>
+      <Footer></Footer>
       </main>
     </>
   )
